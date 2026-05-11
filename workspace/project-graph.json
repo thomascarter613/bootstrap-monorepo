@@ -1,6 +1,8 @@
 {
   "schemaVersion": "0.1.0",
   "generated": false,
-  "projects": {},
+  "projects": {
+    "apps/aic-orchestrator"
+  },
   "edges": []
 }
