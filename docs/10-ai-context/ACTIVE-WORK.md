@@ -15,11 +15,17 @@ tags:
 
 ## Active Work Packet
 
-`docs/09-delivery/work-packets/WP-0001-bootstrap-governance-foundation.md`
+`docs/09-delivery/work-packets/WP-0002-repository-baseline-hardening.md`
 
 ## Focus
 
-Bootstrap the initial self-governing monorepo foundation.
+Harden the generated repository baseline after the initial bootstrap commit.
+
+## Branch
+
+```text
+docs/wp-0002-baseline-hardening
+```
 
 ## Immediate Command
 
@@ -27,8 +33,21 @@ Bootstrap the initial self-governing monorepo foundation.
 bash tools/scripts/verify.sh
 ```
 
+## Acceptance Focus
+
+- WP-0002 exists.
+- CODEOWNERS no longer contains placeholder ownership.
+- Current state reflects the verified baseline commit.
+- The repo still avoids Charon, Foundry, Bazel, and heavyweight orchestration dependency.
+
 ## Recommended Commit
 
 ```text
-docs(governance): bootstrap self-governing monorepo foundation
+docs(work-packet): add repository baseline hardening plan
+```
+
+## Recommended Next Work Packet
+
+```text
+WP-0003: Repository Contract Validator Hardening
 ```
