@@ -1,19 +1,19 @@
 # Default ownership
-* @OWNER
+* @thomascarter613
 
 # Governance and architecture
-/governance/ @OWNER
-/docs/03-architecture/ @OWNER
-/docs/04-decisions/ @OWNER
+/governance/ @thomascarter613
+/docs/03-architecture/ @thomascarter613
+/docs/04-decisions/ @thomascarter613
 
 # Security
-/SECURITY.md @OWNER
-/security/ @OWNER
-/.github/workflows/ @OWNER
+/SECURITY.md @thomascarter613
+/security/ @thomascarter613
+/.github/workflows/ @thomascarter613
 
 # Contracts
-/contracts/ @OWNER
+/contracts/ @thomascarter613
 
 # Tooling
-/tools/ @OWNER
-/workspace/ @OWNER
+/tools/ @thomascarter613
+/workspace/ @thomascarter613
