@@ -1,0 +1,27 @@
+[package]
+name = "aionx-core-runtime"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.78"
+publish = false
+license = "Apache-2.0 OR MIT"
+description = "Layer 1 Core Runtime trust-boundary crate for the AionX AI SDLC Engineering Platform."
+
+[lib]
+name = "aionx_core_runtime"
+crate-type = ["rlib", "cdylib"]
+
+[dependencies]
+bytes = { version = "1.5", features = ["serde"] }
+chrono = { version = "0.4", features = ["serde"] }
+futures = "0.3"
+nix = { version = "0.27", features = ["signal"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+serde_yaml = "0.9"
+thiserror = "1.0"
+toml = "0.8"
+uuid = { version = "1.7", features = ["v7", "serde"] }
+
+[build-dependencies]
+cbindgen = "0.26"

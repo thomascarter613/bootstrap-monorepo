@@ -1,0 +1,8 @@
+language = "C"
+include_guard = "AIONX_CORE_RUNTIME_H"
+pragma_once = true
+documentation = true
+style = "tag"
+
+[export]
+prefix = "Aionx"
