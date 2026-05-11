@@ -1,0 +1,20 @@
+{
+  "name": "@aic/orchestrator",
+  "version": "0.1.0",
+  "description": "AI-Guided SDLC Orchestrator",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@clack/prompts": "^0.9.1",
+    "@google/generative-ai": "^0.24.1",
+    "commander": "^13.1.0",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "bun-types": "latest"
+  }
+}

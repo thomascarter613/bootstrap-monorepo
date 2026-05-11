@@ -18,3 +18,4 @@ tags:
 | ADR-0000 | ADR Template | active | 2026-05-10 |
 | ADR-0001 | Repository as Source of Truth | accepted | 2026-05-10 |
 | ADR-0002 | Repository-Owned Tooling Boundary | accepted | 2026-05-10 |
+| ADR-0003 | Selection of Tech Stack for AI SDLC Orchestrator | proposed | 2026-05-10 |
