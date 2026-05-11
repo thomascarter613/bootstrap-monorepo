@@ -1,0 +1,115 @@
+version: 1
+
+projectTypes:
+  app:
+    description: Deployable user-facing application.
+    requiredFiles:
+      - README.md
+      - project.config.yaml
+    requiredTasks:
+      - lint
+      - test
+      - build
+    requiresOwner: true
+    releaseKind: deployable
+
+  service:
+    description: Deployable backend service, worker, daemon, or gateway.
+    requiredFiles:
+      - README.md
+      - project.config.yaml
+      - docs/runbook.md
+    requiredTasks:
+      - lint
+      - test
+      - build
+    requiresOwner: true
+    releaseKind: deployable
+
+  package:
+    description: Shared library, SDK, utility, or reusable module.
+    requiredFiles:
+      - README.md
+      - project.config.yaml
+    requiredTasks:
+      - lint
+      - test
+      - build
+    requiresOwner: true
+    releaseKind: package
+
+  contract:
+    description: API, event, schema, or integration contract.
+    requiredFiles:
+      - README.md
+      - project.config.yaml
+      - compatibility-policy.md
+    requiredTasks:
+      - lint
+      - validate
+    requiresOwner: true
+    releaseKind: contract
+
+  database-provider:
+    description: Database provider adapter, migration set, or persistence integration.
+    requiredFiles:
+      - README.md
+      - project.config.yaml
+    requiredTasks:
+      - validate
+      - test
+    requiresOwner: true
+    releaseKind: internal
+
+  infra-module:
+    description: Infrastructure module, deployment asset, or local environment unit.
+    requiredFiles:
+      - README.md
+      - project.config.yaml
+    requiredTasks:
+      - validate
+    requiresOwner: true
+    releaseKind: internal
+
+  tool:
+    description: Internal repository tool, script, generator, validator, or codemod.
+    requiredFiles:
+      - README.md
+      - project.config.yaml
+    requiredTasks:
+      - lint
+      - test
+    requiresOwner: true
+    releaseKind: internal
+
+  docs-site:
+    description: Documentation website or publishing surface.
+    requiredFiles:
+      - README.md
+      - project.config.yaml
+    requiredTasks:
+      - lint
+      - build
+    requiresOwner: true
+    releaseKind: deployable
+
+  example:
+    description: Non-production example.
+    requiredFiles:
+      - README.md
+      - project.config.yaml
+    requiredTasks:
+      - validate
+    requiresOwner: true
+    releaseKind: none
+
+  experiment:
+    description: Time-boxed prototype.
+    requiredFiles:
+      - README.md
+      - project.config.yaml
+      - EXPIRATION.md
+    requiredTasks:
+      - validate
+    requiresOwner: true
+    releaseKind: none

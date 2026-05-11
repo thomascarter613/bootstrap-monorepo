@@ -1,0 +1,19 @@
+# Default ownership
+* @OWNER
+
+# Governance and architecture
+/governance/ @OWNER
+/docs/03-architecture/ @OWNER
+/docs/04-decisions/ @OWNER
+
+# Security
+/SECURITY.md @OWNER
+/security/ @OWNER
+/.github/workflows/ @OWNER
+
+# Contracts
+/contracts/ @OWNER
+
+# Tooling
+/tools/ @OWNER
+/workspace/ @OWNER

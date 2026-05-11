@@ -1,0 +1,89 @@
+version: 1
+
+description: >
+  Defines allowed high-level dependency boundaries for the monorepo.
+
+layers:
+  apps:
+    mayDependOn:
+      - packages
+      - contracts
+    mayNotDependOn:
+      - services
+      - infra
+      - db/migrations
+
+  services:
+    mayDependOn:
+      - packages
+      - contracts
+      - db
+    mayNotDependOn:
+      - apps
+
+  packages:
+    mayDependOn:
+      - packages
+      - contracts
+    mayNotDependOn:
+      - apps
+      - services
+      - infra
+
+  contracts:
+    mayDependOn: []
+    mayNotDependOn:
+      - apps
+      - services
+      - packages
+      - infra
+      - db
+
+  infra:
+    mayDependOn:
+      - contracts
+    mayNotDependOn:
+      - apps
+      - services
+      - packages
+
+  docs:
+    mayReference:
+      - apps
+      - services
+      - packages
+      - contracts
+      - db
+      - infra
+      - security
+      - ops
+      - governance
+    mayImport: []
+
+  examples:
+    mayDependOn:
+      - packages
+      - contracts
+    mayNotDependOn:
+      - apps
+      - services
+
+  experiments:
+    mayDependOn:
+      - packages
+      - contracts
+    mayNotDependOn:
+      - production-runtime
+rules:
+  - id: no-app-imports-service
+    description: Apps must not import services directly.
+  - id: no-package-imports-app
+    description: Packages must not import apps.
+  - id: no-contract-imports-implementation
+    description: Contracts must not import implementation code.
+  - id: no-infra-imports-application
+    description: Infrastructure must not import application runtime code.
+  - id: no-examples-in-production
+    description: Production code must not import examples.
+  - id: no-experiments-in-production
+    description: Production code must not import experiments.

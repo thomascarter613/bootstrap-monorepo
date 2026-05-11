@@ -1,0 +1,12 @@
+openapi: 3.1.0
+info:
+  title: Placeholder API
+  version: 0.1.0
+  description: Placeholder OpenAPI document for the monorepo foundation.
+  license:
+    name: UNLICENSED
+jsonSchemaDialect: https://json-schema.org/draft/2020-12/schema
+servers: []
+paths: {}
+components:
+  schemas: {}

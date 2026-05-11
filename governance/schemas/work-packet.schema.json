@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "work-packet.schema.json",
+  "title": "Work Packet Metadata",
+  "type": "object",
+  "required": ["workPacket", "title", "status", "owner"],
+  "properties": {
+    "workPacket": { "type": "string" },
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": ["draft", "proposed", "active", "done", "blocked", "archived"]
+    },
+    "owner": { "type": "string" },
+    "created": { "type": "string" },
+    "updated": { "type": "string" },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": true
+}

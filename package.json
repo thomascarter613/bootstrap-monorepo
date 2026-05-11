@@ -1,0 +1,25 @@
+{
+  "name": "bootstrap-monorepo",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Governance-first, self-verifying monorepo foundation.",
+  "type": "module",
+  "packageManager": "bun@latest",
+  "scripts": {
+    "doctor": "bash tools/scripts/doctor.sh",
+    "verify": "bash tools/scripts/verify.sh",
+    "verify:docs": "bash tools/scripts/verify-docs.sh",
+    "verify:repo-contract": "bash tools/scripts/verify-repo-contract.sh",
+    "verify:workspace": "bash tools/scripts/verify-workspace.sh",
+    "verify:security": "bash tools/scripts/verify-security-baseline.sh",
+    "verify:scripts": "bash tools/scripts/verify-scripts.sh",
+    "lint": "echo 'lint: no code projects have been added yet'",
+    "format": "echo 'format: no formatter target has been added yet'",
+    "typecheck": "echo 'typecheck: no TypeScript projects have been added yet'",
+    "test": "echo 'test: no test targets have been added yet'",
+    "build": "echo 'build: no build targets have been added yet'"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

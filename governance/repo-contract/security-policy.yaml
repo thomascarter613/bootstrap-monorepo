@@ -1,0 +1,26 @@
+version: 1
+
+baseline:
+  requiresSecurityMd: true
+  requiresDependencyPolicy: true
+  requiresSupplyChainPlan: true
+  requiresSbomPlan: true
+  requiresSecretPolicy: true
+
+reviewTriggers:
+  - authentication
+  - authorization
+  - cryptography
+  - secrets
+  - infrastructure
+  - audit-logging
+  - dependency-trust
+  - public-contracts
+  - data-classification
+  - release-artifacts
+
+forbidden:
+  - committed-secrets
+  - real-user-data-in-fixtures-without-approval
+  - production-credentials-in-examples
+  - generated-release-artifacts-without-provenance-once-release-exists

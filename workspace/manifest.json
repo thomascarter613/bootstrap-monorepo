@@ -1,0 +1,25 @@
+{
+  "schemaVersion": "0.1.0",
+  "repo": {
+    "name": "bootstrap-monorepo",
+    "kind": "governance-first-polyglot-monorepo",
+    "defaultBranch": "main"
+  },
+  "tooling": {
+    "defaultCommandRunner": "bun",
+    "plainVerification": true,
+    "optionalOrchestrator": "moon",
+    "requiresCharon": false,
+    "requiresFoundry": false,
+    "requiresBazel": false
+  },
+  "policies": {
+    "repositoryIsSourceOfTruth": true,
+    "requiresAdrForArchitectureChange": true,
+    "requiresProjectDeclaration": true,
+    "requiresDocsFrontmatter": true,
+    "requiresSecurityReviewForSensitiveChanges": true,
+    "requiresGeneratedFileProvenanceWhenPractical": true
+  },
+  "projects": []
+}

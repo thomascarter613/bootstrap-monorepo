@@ -1,0 +1,38 @@
+version: 1
+
+releaseKinds:
+  deployable:
+    description: Apps and services that produce deployment artifacts.
+    requires:
+      - owner
+      - runbook
+      - verification
+      - rollback-plan
+
+  package:
+    description: Reusable packages intended for internal or external consumption.
+    requires:
+      - owner
+      - changelog
+      - versioning-policy
+      - tests
+
+  contract:
+    description: API, event, schema, or error contracts.
+    requires:
+      - owner
+      - compatibility-policy
+      - versioning-policy
+      - validation
+
+  internal:
+    description: Internal tooling, infrastructure, or support modules.
+    requires:
+      - owner
+      - verification
+
+  none:
+    description: Non-released examples or experiments.
+    requires:
+      - owner
+      - expiration-if-experiment

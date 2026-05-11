@@ -1,0 +1,37 @@
+version: 1
+
+scripts:
+  verify:
+    path: tools/scripts/verify.sh
+    required: true
+    description: Complete repository verification gate.
+
+  doctor:
+    path: tools/scripts/doctor.sh
+    required: true
+    description: Repository health check.
+
+  verify-docs:
+    path: tools/scripts/verify-docs.sh
+    required: true
+    description: Documentation verification.
+
+  verify-repo-contract:
+    path: tools/scripts/verify-repo-contract.sh
+    required: true
+    description: Repo contract verification.
+
+  verify-workspace:
+    path: tools/scripts/verify-workspace.sh
+    required: true
+    description: Workspace state verification.
+
+  verify-security-baseline:
+    path: tools/scripts/verify-security-baseline.sh
+    required: true
+    description: Security baseline verification.
+
+  verify-scripts:
+    path: tools/scripts/verify-scripts.sh
+    required: true
+    description: Script executability verification.

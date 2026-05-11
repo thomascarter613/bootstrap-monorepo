@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "project-config.schema.json",
+  "title": "Project Config",
+  "type": "object",
+  "required": ["id", "name", "type", "path", "owners"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "type": {
+      "type": "string",
+      "enum": [
+        "app",
+        "service",
+        "worker",
+        "package",
+        "contract",
+        "database-provider",
+        "infra-module",
+        "tool",
+        "docs-site",
+        "example",
+        "experiment"
+      ]
+    },
+    "path": { "type": "string" },
+    "language": { "type": "string" },
+    "runtime": { "type": "string" },
+    "owners": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1
+    },
+    "dependsOn": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "tasks": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "release": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

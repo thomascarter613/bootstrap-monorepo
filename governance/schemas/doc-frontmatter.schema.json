@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "doc-frontmatter.schema.json",
+  "title": "Document Frontmatter",
+  "type": "object",
+  "required": ["title", "description", "status", "version", "owner", "created", "updated"],
+  "properties": {
+    "title": { "type": "string" },
+    "description": { "type": "string" },
+    "status": {
+      "type": "string",
+      "enum": [
+        "draft",
+        "proposed",
+        "accepted",
+        "active",
+        "superseded",
+        "deprecated",
+        "rejected",
+        "archived"
+      ]
+    },
+    "version": { "type": "string" },
+    "owner": { "type": "string" },
+    "created": { "type": "string" },
+    "updated": { "type": "string" },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "additionalProperties": true
+}

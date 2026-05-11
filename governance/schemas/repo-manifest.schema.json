@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "repo-manifest.schema.json",
+  "title": "Repository Manifest",
+  "type": "object",
+  "required": ["schemaVersion", "repo", "tooling", "policies"],
+  "properties": {
+    "schemaVersion": {
+      "type": "string"
+    },
+    "repo": {
+      "type": "object",
+      "required": ["name", "kind", "defaultBranch"],
+      "properties": {
+        "name": { "type": "string" },
+        "kind": { "type": "string" },
+        "defaultBranch": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "tooling": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "policies": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": true
+}

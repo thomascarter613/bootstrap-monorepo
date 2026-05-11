@@ -1,0 +1,23 @@
+$schema: "https://moonrepo.dev/schemas/workspace.json"
+
+workspace:
+  inheritedTasks:
+    include: []
+
+projects:
+  sources:
+    - "apps/*"
+    - "services/*"
+    - "packages/*"
+    - "contracts/*"
+    - "tools/*"
+
+vcs:
+  manager: "git"
+  defaultBranch: "main"
+
+runner:
+  logRunningCommand: true
+
+# moon is intentionally optional at this stage.
+# The plain verification scripts in tools/scripts are the canonical foundation gate.

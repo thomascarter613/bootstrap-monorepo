@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "0.1.0",
+  "generated": false,
+  "tasks": {
+    "verify": {
+      "command": "bash tools/scripts/verify.sh",
+      "dependsOn": [
+        "verify:docs",
+        "verify:repo-contract",
+        "verify:workspace",
+        "verify:security",
+        "verify:scripts"
+      ]
+    },
+    "verify:docs": {
+      "command": "bash tools/scripts/verify-docs.sh",
+      "dependsOn": []
+    },
+    "verify:repo-contract": {
+      "command": "bash tools/scripts/verify-repo-contract.sh",
+      "dependsOn": []
+    },
+    "verify:workspace": {
+      "command": "bash tools/scripts/verify-workspace.sh",
+      "dependsOn": []
+    },
+    "verify:security": {
+      "command": "bash tools/scripts/verify-security-baseline.sh",
+      "dependsOn": []
+    },
+    "verify:scripts": {
+      "command": "bash tools/scripts/verify-scripts.sh",
+      "dependsOn": []
+    }
+  }
+}

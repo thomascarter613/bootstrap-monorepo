@@ -1,0 +1,29 @@
+version: 1
+
+frontmatter:
+  requiredFor:
+    - docs/**/*.md
+    - governance/**/*.md
+    - security/**/*.md
+    - contracts/**/*.md
+    - ops/**/*.md
+
+statuses:
+  allowed:
+    - draft
+    - proposed
+    - accepted
+    - active
+    - superseded
+    - deprecated
+    - rejected
+    - archived
+
+adr:
+  indexRequired: true
+  path: docs/04-decisions
+  index: docs/04-decisions/INDEX.md
+
+aiContext:
+  path: docs/10-ai-context
+  rule: AI context summarizes canonical repository state and must not replace canonical documents.

@@ -1,0 +1,14 @@
+[tools]
+bun = "latest"
+node = "20"
+python = "3"
+go = "latest"
+rust = "latest"
+
+[tasks.verify]
+description = "Run the complete repository verification gate."
+run = "bash tools/scripts/verify.sh"
+
+[tasks.doctor]
+description = "Run repository doctor checks."
+run = "bash tools/scripts/doctor.sh"

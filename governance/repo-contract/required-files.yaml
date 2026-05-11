@@ -1,0 +1,55 @@
+version: 1
+
+root:
+  required:
+    - README.md
+    - CONTRIBUTING.md
+    - SECURITY.md
+    - LICENSE
+    - package.json
+    - .gitignore
+
+docs:
+  required:
+    - docs/00-vision/VISION.md
+    - docs/00-vision/PRINCIPLES.md
+    - docs/01-product/PRODUCT-CHARTER.md
+    - docs/02-domain/DOMAIN-MODEL.md
+    - docs/03-architecture/ARCHITECTURE.md
+    - docs/04-decisions/ADR-0000-template.md
+    - docs/04-decisions/INDEX.md
+    - docs/10-ai-context/README.md
+    - docs/10-ai-context/CURRENT-STATE.md
+
+governance:
+  required:
+    - governance/REPOSITORY-CONSTITUTION.md
+    - governance/repo-contract/boundaries.yaml
+    - governance/repo-contract/project-types.yaml
+    - governance/repo-contract/required-files.yaml
+    - governance/repo-contract/required-scripts.yaml
+    - governance/repo-contract/documentation-policy.yaml
+    - governance/repo-contract/security-policy.yaml
+    - governance/repo-contract/release-policy.yaml
+
+workspace:
+  required:
+    - workspace/manifest.json
+    - workspace/project-graph.json
+    - workspace/task-graph.json
+
+tools:
+  required:
+    - tools/scripts/verify.sh
+    - tools/scripts/doctor.sh
+    - tools/scripts/verify-docs.sh
+    - tools/scripts/verify-repo-contract.sh
+    - tools/scripts/verify-workspace.sh
+    - tools/scripts/verify-security-baseline.sh
+    - tools/scripts/verify-scripts.sh
+
+security:
+  required:
+    - security/supply-chain/README.md
+    - security/sbom/README.md
+    - security/dependency-policy/README.md
